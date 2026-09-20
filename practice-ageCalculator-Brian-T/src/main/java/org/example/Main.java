@@ -1,17 +1,38 @@
 package org.example;
+import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// -------------------- Age Calculator -------------------- //
+
+//  Instructions:
+//
+//  Write a Java program that prompts the user to enter their age and then prints a
+//  message to the console that tells them how many years they have until they are
+//  100 years old.
+//
+//  Your program should:
+//        ● Take in an age from the user.
+//        ● Calculate the years left until they are 100 years old.
+//        ● Return a message to tell the user many many years they have until they are 100.
+
+// ------------------------------------------------------- //
+
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        // Creates a Scanner object to read the users input
+        Scanner scanner = new Scanner(System.in);
+
+        // Asks the user for their age
+        System.out.print("Please Enter Your Age: ");
+
+        // Stores the user's input as the age variable
+        int age = scanner.nextInt();
+
+        // Calculates how many years until 100yrs old
+        int yearsUntilOneHundred = 100 - age;
+
+        // Display's the Message
+        System.out.println("You have " + yearsUntilOneHundred + " years until you are 100 years old!");
+
     }
 }
